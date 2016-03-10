@@ -1,0 +1,13 @@
+
+podcast:
+  image: jshimko/telescope-podcast:0.25.7
+  links:
+    - mongo
+  environment:
+    ROOT_URL: "http://podcast-today.com"
+    MONGO_URL: "mongodb://mongo:27017/myapp"
+    VIRTUAL_HOST: "podcast-today.com"
+
+mongo-podcast:
+  image: mongo:latest
+  command: mongod --storageEngine=wiredTiger
